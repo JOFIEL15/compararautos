@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,14 @@
   <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Flowbite CSS -->
-<link href="https://cdn.jsdelivr.net/npm/flowbite@1.6.0/dist/flowbite.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@1.6.0/dist/flowbite.min.css" rel="stylesheet" />
 
-<!-- Flowbite JS -->
-<script src="https://cdn.jsdelivr.net/npm/flowbite@1.6.0/dist/flowbite.min.js"></script>
+  <!-- Flowbite JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@1.6.0/dist/flowbite.min.js"></script>
 
-  
+
 </head>
+
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
   <div class="container mx-auto max-w-4xl p-6 bg-white rounded-lg shadow-lg" data-aos="fade-up">
     <h1 class="text-3xl font-bold text-gray-800 text-center mb-6" data-aos="fade-up">Comparador de Vehículos</h1>
@@ -26,7 +28,8 @@
       <div data-aos="fade-up" data-aos-delay="100">
         <h2 class="text-xl font-semibold text-gray-700 mb-2">Vehículo 1</h2>
         <label for="vehiculo1" class="block text-sm font-medium text-gray-600">Marca y Modelo</label>
-        <select id="vehiculo1" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" onchange="mostrarImagen('vehiculo1', 'imagen1')">
+        <select id="vehiculo1" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+          onchange="mostrarImagen('vehiculo1', 'imagen1')">
           <option value="">Selecciona un vehículo</option>
           <!-- Opciones dinámicas se agregarán aquí -->
         </select>
@@ -35,7 +38,8 @@
           <!-- Opciones dinámicas -->
         </select>
         <div class="mt-4">
-          <img id="imagen1" class="w-full h-48 object-cover rounded-lg border" src="img/marcas.jpg" alt="Imagen del Vehículo 1">
+          <img id="imagen1" class="w-full h-48 object-cover rounded-lg border" src="img/marcas.jpg"
+            alt="Imagen del Vehículo 1">
         </div>
       </div>
 
@@ -43,7 +47,8 @@
       <div data-aos="fade-up" data-aos-delay="200">
         <h2 class="text-xl font-semibold text-gray-700 mb-2">Vehículo 2</h2>
         <label for="vehiculo2" class="block text-sm font-medium text-gray-600">Marca y Modelo</label>
-        <select id="vehiculo2" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" onchange="mostrarImagen('vehiculo2', 'imagen2')">
+        <select id="vehiculo2" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+          onchange="mostrarImagen('vehiculo2', 'imagen2')">
           <option value="">Selecciona un vehículo</option>
           <!-- Opciones dinámicas se agregarán aquí -->
         </select>
@@ -52,101 +57,127 @@
           <!-- Opciones dinámicas -->
         </select>
         <div class="mt-4">
-          <img id="imagen2" class="w-full h-48 object-cover rounded-lg border" src="img/marcas.jpg" alt="Imagen del Vehículo 2">
+          <img id="imagen2" class="w-full h-48 object-cover rounded-lg border" src="img/marcas.jpg"
+            alt="Imagen del Vehículo 2">
         </div>
       </div>
     </div>
 
     <!-- Botón Comparar -->
-    <button onclick="comparar()" class="mt-6 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition" data-aos="fade-up" data-aos-delay="300">
+    <button onclick="comparar()"
+      class="mt-6 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition" data-aos="fade-up"
+      data-aos-delay="300">
       Comparar Vehículos
     </button>
 
     <!-- Resultado -->
-    <div id="resultado" class="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-lg text-gray-700" >
+    <div id="resultado" class="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-lg text-gray-700">
       <!-- Resultados se mostrarán aquí -->
     </div>
 
     <div class="container mx-auto p-6">
-      <h2 class="text-2xl font-bold text-gray-800 text-center mb-6" data-aos="fade-up">Modelos Populares hace 24 años</h2>
-      
-
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
-  <!-- Carousel wrapper -->
-  <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-       <!-- Item 1 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="img/civic2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 2 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="img/mustang2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 3 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="img/corolla2.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 4 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="img/mazda32.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-      <!-- Item 5 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img src="img/focus2.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-      </div>
-  </div>
-  <!-- Slider indicators -->
-  <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-  </div>
-  <!-- Slider controls -->
-  <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-          </svg>
-          <span class="sr-only">Previous</span>
-      </span>
-  </button>
-  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-      <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-          </svg>
-          <span class="sr-only">Next</span>
-      </span>
-  </button>
-</div>
+      <h2 class="text-2xl font-bold text-gray-800 text-center mb-6" data-aos="fade-up">Modelos Populares hace 24 años
+      </h2>
 
 
-    
-    <footer class="flex flex-col space-y-10 justify-center m-10">
+      <div id="default-carousel" class="relative w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="img/civic2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="...">
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="img/mustang2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="...">
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="img/corolla2.jpeg"
+              class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          </div>
+          <!-- Item 4 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="img/mazda32.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="...">
+          </div>
+          <!-- Item 5 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="img/focus2.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              alt="...">
+          </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+            data-carousel-slide-to="0"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+            data-carousel-slide-to="1"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+            data-carousel-slide-to="2"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+            data-carousel-slide-to="3"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+            data-carousel-slide-to="4"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+          class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 1 1 5l4 4" />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button type="button"
+          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 9 4-4-4-4" />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
 
 
-      <div class="flex justify-center space-x-5">
-        <a href="https://github.com/JOFIEL15" target="_blank" rel="noopener noreferrer">
-          <img src="https://img.icons8.com/fluent/30/000000/github.png" alt="GitHub" />
-        </a>
-        
-          <a href="https://mx.linkedin.com/in/jofiel-alfredo-ontiveros-rivera-48583022b" target="_blank" rel="noopener noreferrer">
-              <img src="https://img.icons8.com/fluent/30/000000/linkedin-2.png" />
+
+      <footer class="flex flex-col space-y-10 justify-center m-10">
+
+
+        <div class="flex justify-center space-x-5">
+          <a href="https://github.com/JOFIEL15" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.icons8.com/fluent/30/000000/github.png" alt="GitHub" />
           </a>
-      </div>
-      <p class="text-center text-gray-700 font-medium">&copy; 2024 Jofiel Ontiveros Front-end developer</p>
-  </footer>
-  
-  </div>
 
-  
-  <!-- Inicialización de AOS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <script src="app.js"></script>
+          <a href="https://mx.linkedin.com/in/jofiel-alfredo-ontiveros-rivera-48583022b" target="_blank"
+            rel="noopener noreferrer">
+            <img src="https://img.icons8.com/fluent/30/000000/linkedin-2.png" />
+          </a>
+        </div>
+        <p class="text-center text-gray-700 font-medium">&copy; 2024 Jofiel Ontiveros Front-end developer</p>
+      </footer>
+
+    </div>
+
+
+    <!-- Inicialización de AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="app.js"></script>
 </body>
+
 </html>
