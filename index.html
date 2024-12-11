@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparador de Vehículos</title>
+  <!-- Enlace al CDN de Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="container mx-auto max-w-4xl p-6 bg-white rounded-lg shadow-lg">
+    <h1 class="text-3xl font-bold text-gray-800 text-center mb-6">Comparador de Vehículos</h1>
+
+    <!-- Formulario -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Vehículo 1 -->
+      <div>
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Vehículo 1</h2>
+        <label for="vehiculo1" class="block text-sm font-medium text-gray-600">Marca y Modelo</label>
+        <select id="vehiculo1" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" onchange="mostrarImagen('vehiculo1', 'imagen1')">
+          <!-- Opción vacía por defecto -->
+          <option value="">Selecciona un vehículo</option>
+          <!-- Opciones dinámicas se agregarán aquí -->
+        </select>
+        <label for="ano1" class="block text-sm font-medium text-gray-600 mt-4">Año</label>
+        <select id="ano1" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+          <!-- Opciones dinámicas -->
+        </select>
+        <div class="mt-4">
+          <img id="imagen1" class="w-full h-48 object-cover rounded-lg border" src="img/marcas.jpg" alt="Imagen del Vehículo 1">
+        </div>
+      </div>
+
+      <!-- Vehículo 2 -->
+      <div>
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Vehículo 2</h2>
+        <label for="vehiculo2" class="block text-sm font-medium text-gray-600">Marca y Modelo</label>
+        <select id="vehiculo2" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" onchange="mostrarImagen('vehiculo2', 'imagen2')">
+          <!-- Opción vacía por defecto -->
+          <option value="">Selecciona un vehículo</option>
+          <!-- Opciones dinámicas se agregarán aquí -->
+        </select>
+        <label for="ano2" class="block text-sm font-medium text-gray-600 mt-4">Año</label>
+        <select id="ano2" class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+          <!-- Opciones dinámicas -->
+        </select>
+        <div class="mt-4">
+          <img id="imagen2" class="w-full h-48 object-cover rounded-lg border" src="img/marcas.jpg" alt="Imagen del Vehículo 2">
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón Comparar -->
+    <button onclick="comparar()" class="mt-6 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition">
+      Comparar Vehículos
+    </button>
+
+    <!-- Resultado -->
+    <div id="resultado" class="mt-6 p-4 bg-gray-50 border border-gray-200 rounded-lg text-gray-700">
+      <!-- Resultados se mostrarán aquí -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
